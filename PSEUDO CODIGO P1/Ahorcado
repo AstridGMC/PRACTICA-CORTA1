@@ -1,0 +1,100 @@
+inicio 
+
+VIDAS = 7 
+var palabraUsuario
+var tamaño
+var palabra
+correctas = 0
+var letra
+contador =0
+
+
+escribir ("BIENVENIDO AL JUEGO AHORCADO")
+esribir (introduce una parabra a adivinar:)
+leer palabraUsuario
+tamaño = palabraUsuario.tamaño
+palabra[tamaño]
+escrivir "la palabra a adivinar es " + palabra usuario
+
+para (contador i = 0; i < tamaño; i+1)
+	palabra[i] = escribir "*"
+fin para
+
+mientras (correctas!= tamaño y VIDAS !=0 )
+	escribir "adivina la palabra" + correctas
+	llamar dibujos(VIDAS)
+	
+	para(contador i = 0; i < tamaño; i+1)
+		escribir "___" + palabra[i] +"___"
+		escribir "jugador ingrese una letra a adivinar"
+		leer letra
+		para(contador i = 0; i < tamaño; i+1)
+			
+			si (palabraUsuario contiene letra)
+				si (caracter de palabra usuario ==caracterletra
+			correctas = correctas + contador
+			finsi
+
+			si no 
+			vidas-- 
+			finsi
+
+	si (VIDAS == 0)
+		llamar dibujos(VIDAS) 
+	si no 
+		para (contador i = 0; i < tamaño; i+1)
+			escribir "_____ palabra[i]___
+			escribir "FELICIDADES HAZ GANADO"
+			si (correctas==tamaño)
+	SI(VIDAS ==0)
+	
+		llamar a menuFinalAhorcado
+			
+fin
+
+inicio dibujos(VIDAS)
+segun [i] hacer
+	caso, =7
+		dibujar base
+	caso, =6
+		dibujar soga
+	caso, =5
+		dibujar cabeza
+	caso, =4
+		dibujar cabeza, cuerpo
+	caso, =3
+		dibujar cabeza, cuerpo, brazo derecho
+	caso, =2
+		dibujar cabeza, cuerpo, brazo derecho, brazo izquierdo
+	caso, =1
+		dibujar cabeza, cuerpo, brazo derecho, brazo izquierdo, pierna derecha
+	caso, =0
+		dibujar cabeza, cuerpo, brazo derecho, brazo izquierdo, pierna derecha, pierna izquierda
+		escribir"AHORADO!!"
+fin
+
+inicio menuFinalAhorcado
+
+	escribir "elije una opcion"
+        escribir"1 para regresar a Menu Principal"
+        escribir"2 repetir el juego"
+        escribir"3 salir del juego"
+	leer opcion
+
+        segun (opcion) hacer
+            caso 1:
+                escribir "Menu Principal"
+                llamar menu
+            caso 2:
+                escribir"reiniciar"
+                llamar Ahorcado
+            caso 3:
+                escribir"salir"
+                salir
+                
+            siNo:
+                escribir"ingrese un numero valido por favor"
+fin
+
+
+

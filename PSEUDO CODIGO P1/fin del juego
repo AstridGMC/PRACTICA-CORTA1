@@ -1,0 +1,17 @@
+var opcionFinDelJuego
+
+escribir ("el juego ha finalizado, escoja una opcion")
+escribir ("1 = repetir el juego")
+escribir ("2 = regresar al menu")
+escribir ("3 = salir)
+
+leer opcionFinDelJuego
+
+mientras (opcionFinDelJuego = 1)
+	ejecutar Ahorcado 
+
+si (opcionFinDelJuego = 2)
+	ejeutar menu
+
+si no 
+	 salir del juego

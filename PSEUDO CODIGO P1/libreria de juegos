@@ -1,0 +1,24 @@
+
+	var parametro; 
+   	var numero;
+	var turnos;
+
+    inicio libreriaDeJuegos
+        escribir"escriba un parametro para entrar directamente a un juego"
+        escribir"escriba otro numeo para entrar al menu"
+        leer parametro 
+
+        segun (parametro) hacer
+            caso 1:
+                escribir "1"
+                llamar a Ahorcado
+            caso 2:
+                escribir"2"
+                llamar a Basketball
+            caso 3:
+                esbribir "3"
+                llamar a Cartas
+            caso 4:
+                escribir "4"
+            siNo:
+                menu();

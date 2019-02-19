@@ -1,0 +1,73 @@
+//pedir saldo con el que cuenta el usuario, escoger dos cartas aleatorias y mostrarselas al usuario
+// pedir al usuario que apueste y valuar la apuesta 
+
+inicio Saldo
+
+	var Saldo 
+	Escribir "INGRESE SU NOMBRE"
+	Leer (nombre)
+	Escribir "INGRESE SU SALDO INICIAL"
+	leer(saldo)
+
+	llamar apuestaYEvaluacion(saldo)
+
+fin 
+
+inicio  apuestaYEvaluacion
+	mientras (saldo > 0)
+	var apuesta
+	var aleaoria carta1
+	var aleatoria carta2
+	var aleatoria carta3 
+	var 
+	Escribir "las cartas son carta1 y carta2"
+	Escribir "cuanto desea apostar por que la sigiente carta se encuantra enre los valores de las cartas 			anteriores?")
+	leer(apuesta)
+
+
+	si(saldo >= apuesta)
+		si ( carta 1 < carta 3 && carta 2 > carta 3) 
+			saldo= saldo + apuesta
+			escribir ("tu nuevo saldo es: " + saldo)
+		si no 
+			si (carta 2< carta 3 && carta 1> carta 3)
+				saldo= saldo + apuesta
+				escribir ("tu nuevo saldo es: " + ganancia)
+				si no
+				saldo - apuesta
+				escribir ("tu nuevo saldo es: " + (ganancia-apuesta)
+	finsi
+	si no
+		escribir "su saldo es insuficiente"
+	fin mientras
+	si (saldo <= 0)
+		escribir "su dinero se ha agotado :("
+		llamar a menuFinal 
+		fin si
+fin 
+
+inicio menuFinalCartas
+
+	escribir "elije una opcion"
+        escribir"1 para regresar a Menu Principal"
+        escribir"2 repetir el juego"
+        escribir"3 salir del juego"
+	leer opcion
+
+        segun (opcion) hacer
+            caso 1:
+                escribir "Menu Principal"
+                llamar menu
+            caso 2:
+                escribir"reiniciar"
+                llamar Cartas
+            caso 3:
+                escribir"salir"
+                salir
+                
+            siNo:
+                escribir"ingrese un numero valido por favor"
+fin
+
+
+

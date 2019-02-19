@@ -1,0 +1,36 @@
+inicio menu
+
+	var opcion
+	escribir"BIENVENIDO A TU PAQUETE DE JUEGOS"
+	escribir "elije una opcion"
+	escribir"1 para jugar Cartas
+        escribir"2 para jugar Basquetball" 
+        escribir"3 para jugar Cartas" 
+        escribir"4 para jugar Hanoi" 
+        escribir"5 para salir del juego" 
+
+        segun (opcion) hacer
+            cas0 1:
+                escribir "Ahorcado"
+                llamar Ahorcado
+            caso 2:
+                escribir"Cartas"
+                llamar Ahorcado
+            caso 3:
+                escribir"Basketball"
+                llamar Basquetball
+            cas0 4:
+                escribir "Cartas"
+                llamar Cartas
+            caso 5:
+                escribir"Hanoi"
+                llamar Hanoi
+            caso 6:
+                escribir"Salir"
+                salir
+                
+            siNo:
+                escribir"ingrese un numero valido por favor"
+fin
+
+

@@ -1,0 +1,361 @@
+// introducir datos
+//condiciones de turnos  
+// calculos de tiro libre
+//ejecucion de defensa
+
+
+var numero;
+var turnos;
+
+inicio introducirDatos
+
+	var nombre 1
+	var nombre 2
+	var[2] nobres (nombre 1,nombre 2)
+	jugador = nombres.aleatrios
+	var nombreAl1
+	var nombreAl2
+
+	escribir"BIENBENIDO AL JUEGO BASKETBALL"
+
+	Escribir"De cuantos turnos por jugador desea la partida?"
+	Leer (turnos*2)
+	Escribir"Jugador 1 escriba su nombre"
+	Leer (nombre1)
+	Escribir"Jugador 2 escriba su nombre"
+	Leer (nombre2)
+	escribir "empieza" + jugador+ +"urno # " + turnos
+	
+	mientras (turnos > 0 ) 
+		si (turnos%2 !=0)
+			escribir "turno#" + turnos +"del jugador 2"
+			llamar a menuPartida()
+			puntos2=(puntos2 + numero)
+			escribir "sus punos son " + puntos2
+		si no
+			si (turnos %2 == 0)
+			escribir "turno#" + turnos +"del jugador 1"
+			llamar a menuPartida()
+			puntos1=(puntos1 + numero)
+			escribir "sus punos son " + puntos1
+			finsi 
+			turnos --
+	fin mientras
+	
+	si (turnos == 0)
+	
+	esscribir "FIN DEL JUEGO"
+	escribir "el Ganador es:"
+		si (puntos1>puntos2)
+			escribir"EL JUGADOR 1 " + nombre1
+			escribir"FELICIDADES!!"
+		finsi
+	si no 
+		si(punos1<puntos2)
+ 			escribir"EL JUGADOR 2 " + nombre2
+			escribir"FELICIDADES!!"
+		si no 
+			escribir"HA OCURRIDO UN EMPATE "
+			escribir"FELICIDADES A LOS DOS JUGADORES!!"
+	finsi
+	si(turnos==0)
+		llamar menuFinalBasquetball
+	
+
+fin
+
+*********************************
+inicio menuPartida
+	var movimiento 
+	var saltoLargo 
+	var saltoCorto
+	var Defensa1
+	var defensa2
+
+	Escribir"Elija un movimiento"
+	Escribir"elija 1 para realizar salto largo(5 metros)"
+	escribir"elija 2 para realizar salto corto(3 metros)"
+	escribir"elija 3 para realizar Defensa cuerpo a cuerpo"
+	Escribir"elija 4 para realizar defensa fuerte"
+	Leer(movimiento)
+
+	
+
+	segun(movimiento) 
+	      	 caso, = 1  
+			escribir "ha elegido realizar salto largo (5 metros)"
+			llamar saltoLargo 
+		 caso, = 2  
+			escribir "ha elegido realizar salto corto (3 metros)"
+			llamar saltoCorto
+		 caso, = 3 
+			escribir "ha elegido realizar Defensa cuerpo a cuerpo"
+			llamar menuPartidaDefensaCC 
+		 caso, =4 
+			escribir "ha elegido realizar defensa fuerte"
+			llamar menuPartidaDefensaF
+final
+
+
+inicio menuPartidaDefensaCC
+	var movimiento;
+        var saltoLargo;
+        var saltoCorto;
+        var defensa1;
+        var defensa2;
+        turnos--;
+	Escribir "siguiente turno#" + turno 
+	Escribir"Elija un movimiento"
+	Escribir"elija 1 para realizar salto largo(5 metros)"
+	escribir"elija 2 para realizar salto corto(3 metros)"
+	leer (movimiento)
+	segun(movimiento)
+	      	 caso, 1 
+			escribir "ha elegido realizar salto largo (5 metros)"
+			llamar defensaCCL 
+		 caso, 2 
+			escribir "ha elegido realizar salto corto (3 metros)"
+			llamar defensaCCC
+fin
+
+inicio menuPartidaDefensaF
+
+	var movimiento;
+        var saltoLargo;
+        var saltoCorto;
+        var defensa1;
+        var defensa2;
+	Escribir "siguiente turno#" + turno
+	Escribir"Elija un movimiento"
+	Escribir"elija 1 para realizar salto largo(5 metros)"
+	escribir"elija 2 para realizar salto corto(3 metros)"
+	segun(movimiento )
+	      	 caso, 1 
+			llamar defensaFL 
+		 caso, 2 
+			llamar defensaFC
+	
+fin 
+
+***********************	
+
+inicio saltoLargo 
+	variable aleatoria saltoL;
+	
+	si (saltoL > 65)
+		Escribir "HA FALLADO"
+ 		nuemero = 0 
+	si no 
+		si (saloL <= 65)
+			Escribir "CANASTA!!"
+			numero = 3
+		finsi
+	retornar numero
+			 
+fin 
+
+inicio saltoCorto 
+	var aleatoria saloC;
+	si (saltoC > 80)
+		Escribir "HA FALLADO"
+		numero = 0
+	entonces
+		si (saloC <= 80)
+			Escribir "CANASTA"
+			numero = 2
+		finsi
+	retornar numero
+fin 
+
+*********************
+
+// defensa cuerpo a cuerpo larga
+inicio DefensaCCL 
+	var tiroLibre
+	var aleaoria defensaL
+	
+	si (defensaL >65)
+		escribir "FALTA!! de la defensa haga un tiro libre "
+		escribir "oprima 0 para realizar el tiro libre"
+		leer(tiroLibre)
+		segun(tiroLibre)
+			caso, = 0
+				llamar tiroLibre()
+			caso, SiNo
+				escribir "numero invalido"
+	si no
+		si(defensaL<=65)
+			escribir"DEFENSA!!"
+			 saltoLagoConDefensaCC()
+			
+		fin si
+fin 
+
+// defensa cuerpo a cuerpo corta
+inicio DefensaCCC 
+	var tiroLibre
+	var aleaoria defensaC
+	
+	si (defensaC >65)
+		escribir "FALTA!! de la defensa haga un tiro libre "
+		escribir "oprima 0 para realizar el tiro libre"
+		leer(tiroLibre)
+		segun(tiroLibre)
+			caso, = 0
+				llamar tiroLibre()
+			caso, SiNo
+				escribir "numero invalido"
+	si no
+		si(defensaC<=65)
+			escribir"DEFENSA!!"
+			saltoCortoConDefensaCC();
+		fin si
+fin
+
+
+// defensa Fuerte salto largo
+inicio DefensaFL 
+	var tiroLibre
+	var aleaoria defensaC
+	
+	si (defensaC >35)
+		escribir "FALTA!! de la defensa haga un tiro libre "
+		escribir "oprima 0 para realizar el tiro libre"
+		leer(tiroLibre)
+		segun(tiroLibre)
+			caso, = 0
+				llamar tiroLibre()
+			caso, SiNo
+				escribir "numero invalido"
+	si no
+		si(defensaC<=35)
+			escribir"DEFENSA!!"
+			saltoLargoConDefensaF();
+		fin si
+fin
+
+// defensa fuerte salto corto
+inicio DefensaFC 
+	var tiroLibre
+	var aleaoria defensaC
+	
+	si (defensaL >35)
+		escribir "FALTA!! de la defensa haga un tiro libre "
+		escribir "oprima 0 para realizar el tiro libre"
+		leer(tiroLibre)
+		segun(tiroLibre)
+			caso, = 0
+				llamar tiroLibre()
+			caso, SiNo
+				escribir "numero invalido"
+	si no
+		si(defensaL<=35)
+			escribir"DEFENSA!!"
+			 saltoCortoConDefensaF()
+		fin si
+fin 
+
+
+
+
+
+
+
+********************
+
+inicio saltoCortoConDefensaCC
+
+	variable aleatoria saltoCDC;
+	si (saltoC > 65)
+		escribir"HA FALLADO"
+		numero = 0
+	entonces
+		si (saloC <= 65)
+			Escribir "CANASTA"
+			numero = 2
+	retornar numero
+fin
+
+inicio saltoCortoConDefensaF
+	variable aleatoria saltoCDF;
+	var numero 
+	si (saltoCDF > 50)
+		escribir"HA FALLADO"
+		numero = 0
+	entonces
+		si (saloCDF <= 50)
+			Escribir "CANASTA"
+			numero = 2
+	retornar numero
+fin
+
+		
+
+inicio saltoLargoConDefensaCC 
+	variable aleatoria saltoL;
+	si (saltoL > 50)
+		escribir"HA FALLADO"
+ 		nuemero = 0
+	si no 
+		si (saltoL <= 50)
+			Escribir "CANASTA!!"
+			numero = 3
+	retornar numero
+fin
+
+
+
+inicio saltoLargoConDefensaF 
+	variable aleatoria saltoLDF;
+	si (saltoLDF > 35)
+		escribir"HA FALLADO"
+ 		nuemero = 0 
+	si no 
+		si (saltoLDF <= 35)
+			Escribir "CANASTA!!"
+			numero = 3
+	retornar numero
+fin 
+
+
+			
+***************************
+inicio tiroLibre
+	variable aleatoria tiroL;
+	si (tiroL>90)
+		escribir"HA FALLADO"
+		numero = 0	
+	si no
+		si (tiroL<= 90)
+			escribir "CANASTA"
+			numero = 2
+	retornar numero
+fin 
+******************************
+
+
+inicio menuFinaBasketball
+
+	escribir "elije una opcion"
+        escribir"1 para regresar a Menu Principal"
+        escribir"2 repetir el juego"
+        escribir"3 salir del juego"
+	leer opcion
+
+        segun (opcion) hacer
+            caso 1:
+                escribir "Menu Principal"
+                llamar menu
+            caso 2:
+                escribir"reiniciar"
+                llamar Basquetball;
+            caso 3:
+                escribir"salir"
+                salir
+                
+            siNo:
+                escribir"ingrese un numero valido por favor"
+fin
+
+
+
